@@ -16,15 +16,6 @@ class DayForecast {
     return "${date.day}-${date.month}-${date.year}";
   }
 
-  factory DayForecast.fromFirestore(Map<String, dynamic> data) {
-    return DayForecast(
-      date: data['hour'],
-      image: data['image'],
-      temp: data['temp'],
-      feelsLike: data['feelsLike'],
-    );
-  }
-
   factory DayForecast.empty() {
     return DayForecast(
       date: DateTime.now(),
